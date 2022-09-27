@@ -6,7 +6,7 @@ from pydantic.schema import datetime
 
 
 class PostDB(BaseModel):
-    id: UUID
+    id: str
     title: str
     text: str
     created: datetime
@@ -21,7 +21,7 @@ class PostRead(BaseModel):
     id: str
     title: str
     text: str
-    created: str
+    created: datetime
 
 
 class PostUpdate(BaseModel):
